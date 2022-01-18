@@ -2,7 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+$firstViewHeight: 940px;
+$yellowColor: #ffcc48;
+
+.defaultTransition {
+  transition: all 0.5s;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins';
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+.shadow-overlay {
+  background-color: black;
+  opacity: 0.27;
+}
+
+.background-image {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-left {
+  background: linear-gradient(to right, white 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  fill: black;
+  &:hover {
+    background-position: 100%;
+    fill: white;
+    cursor: pointer;
+  }
+  transition: all 0.25s;
+}
+
+.arrow-right {
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-left: 1px solid rgb(170, 170, 170);
+  fill: black;
+  &:hover {
+    background-position: -100%;
+    fill: white;
+    cursor: pointer;
+  }
+  @extend .defaultTransition;
+}
+
+.contact-button {
+  height: 52px;
+  max-height: 383px;
+
+  letter-spacing: 3.6px;
+  background: linear-gradient(to left, $yellowColor 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: white;
+  &:hover {
+    background-position: -100%;
+    color: black;
+    cursor: pointer;
+  }
+  text-transform: uppercase;
+  font-weight: bold;
+  @extend .defaultTransition;
+}
+
+.fancy-navlink-border {
+  &:after {
+    display: block;
+    position: relative;
+    top: 16.5px;
+    content: '';
+    border-bottom: solid 1px white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
+  transition: transform 250ms ease-in-out;
 }
