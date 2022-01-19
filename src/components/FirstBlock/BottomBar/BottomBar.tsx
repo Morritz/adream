@@ -11,7 +11,7 @@ export default function BottomBar() {
   const ctx = useContext(bgImageContext);
 
   return (
-    <div className="relative flex items-end justify-center lg:justify-start h-[125px] w-full">
+    <div className="relative flex items-end justify-between lg:justify-start h-[125px] w-full">
       <div
         ref={arrowLeft}
         onMouseEnter={() => setLeftHovered(true)}

@@ -23,6 +23,15 @@ export default function FirstBlock() {
   let interval: NodeJS.Timer;
   const [currentImage, setCurrentImage] = useState(0);
 
+  useEffect(() => {
+    preloadImages();
+  }, []);
+
+  const preloadImages = () => {
+    images.forEach((image) => {
+      new Image().src = image;
+    });
+  };
   const nextImage = () => {
     console.log(currentImage);
     if (currentImage > images.length - 2) {

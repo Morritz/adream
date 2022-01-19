@@ -11,5 +11,23 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-minify-html',
+      options: {
+        debug: false, // debug optional, default false
+        config: {
+          // Enabled default by this plugin
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          // Disabled default by html-minifier-terser
+          sortAttributes: true,
+          useShortDoctype: true,
+        },
+      },
+    },
   ],
 };
