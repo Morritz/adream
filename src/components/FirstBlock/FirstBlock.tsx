@@ -92,7 +92,7 @@ export default function FirstBlock() {
         previousImage: previousImageButton,
       }}
     >
-      <div className="relative first-background w-full min-h-[940px]">
+      <section className="relative first-background w-full min-h-[940px]">
         <BackgroundImage />
         <ShadowOverlay />
         <div className="px-[16px] md:px-[64px] 2xl:px-[175px] mx-auto relative overflow-hidden">
@@ -100,7 +100,7 @@ export default function FirstBlock() {
           <Hero />
         </div>
         <BottomBar />
-      </div>
+      </section>
     </bgImageContext.Provider>
   );
 }

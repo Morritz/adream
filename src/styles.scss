@@ -108,3 +108,19 @@ h1 {
 
   transition: transform 250ms ease-in-out;
 }
+
+$tbtpadding: 29px;
+
+.two-by-two-tl {
+  top: 0;
+  left: 0;
+  padding-top: $tbtpadding;
+  padding-left: $tbtpadding;
+}
+
+.two-by-two-bl {
+  bottom: 0;
+  left: 0;
+  padding-bottom: $tbtpadding;
+  padding-left: $tbtpadding;
+}
