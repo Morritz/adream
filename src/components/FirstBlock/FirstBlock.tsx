@@ -35,7 +35,6 @@ export default function FirstBlock() {
     });
   };
   const nextImage = () => {
-    console.log(currentImage);
     if (currentImage > images.length - 2) {
       setCurrentImage(0);
     } else {
@@ -92,10 +91,10 @@ export default function FirstBlock() {
         previousImage: previousImageButton,
       }}
     >
-      <section className="relative w-full min-h-[940px]">
+      <section className="relative w-full min-h-[940px] overflow-hidden">
         <BackgroundImage />
         <ShadowOverlay />
-        <div className="px-[16px] md:px-[64px] 2xl:px-[175px] mx-auto relative overflow-hidden">
+        <div className="px-[16px] md:px-[64px] 2xl:px-[175px] mx-auto relative">
           <NavBar />
           <Hero />
         </div>

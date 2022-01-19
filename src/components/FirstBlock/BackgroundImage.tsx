@@ -14,7 +14,7 @@ export default function BackgroundImage() {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -300, opacity: 0 }}
         transition={{
-          type: 'tween',
+          type: 'spring',
         }}
       />
     </AnimatePresence>

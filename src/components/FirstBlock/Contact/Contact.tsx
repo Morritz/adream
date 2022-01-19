@@ -5,7 +5,7 @@ import ContactInput from './ContactInput';
 
 export default function Contact() {
   return (
-    <div className="bg-white max-w-[449px] h-full p-[33px] min-h-[638px]">
+    <div className="basis-1/2 bg-white max-w-[449px] h-full p-[33px] min-h-[638px]">
       <h3 className="text-black text-[28px] font-bold">Lorem ipsum</h3>
       <h3 className="text-black text-[28px] font-bold">
         Lorem ipsum lorem ipsum
