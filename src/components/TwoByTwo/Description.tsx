@@ -1,7 +1,4 @@
 import React from 'react';
-import Button from './Button';
-import ImageContainer from './ImageContainer';
-import Row from './Row';
 
 interface DescriptionProps {
   variant: 'top-left' | 'bottom-left';

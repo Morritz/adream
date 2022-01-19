@@ -13,9 +13,15 @@ export default function BottomBar() {
   const ctx = useContext(bgImageContext);
 
   const sliderAnimationFrame = () => {
-    const percentage =
-      ((new Date().getTime() - ctx.startTime.current.getTime()) / 10000) * 100;
-    slider.current.style.backgroundPosition = `-${Math.min(100, percentage)}%`;
+    if (slider.current) {
+      const percentage =
+        ((new Date().getTime() - ctx.startTime.current.getTime()) / 10000) *
+        100;
+      slider.current.style.backgroundPosition = `-${Math.min(
+        100,
+        percentage,
+      )}%`;
+    }
     requestAnimationFrame(sliderAnimationFrame);
   };
 
