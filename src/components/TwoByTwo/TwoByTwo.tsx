@@ -27,6 +27,7 @@ export default function TwoByTwo() {
             title="Lorem ipsum"
             subtitle="od 500 zł/msc"
           />
+          <Button />
         </ImageContainer>
       </Row>
 

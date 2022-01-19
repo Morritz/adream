@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 interface ImageContainerProps {
@@ -7,8 +8,15 @@ interface ImageContainerProps {
 
 export default function ImageContainer({ children, src }: ImageContainerProps) {
   return (
-    <div className="relative">
-      <img src={src} object-fit="cover"></img>
+    <div className="relative overflow-hidden">
+      <motion.img
+        src={src}
+        object-fit="cover"
+        whileHover={{
+          scale: 1.2,
+        }}
+        transition={{ type: 'tween' }}
+      ></motion.img>
       {children}
     </div>
   );
