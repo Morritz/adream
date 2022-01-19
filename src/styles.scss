@@ -40,7 +40,6 @@ h1 {
   background: linear-gradient(to right, white 50%, black 50%);
   background-size: 200% 100%;
   background-position: left bottom;
-  border-right: 1px solid rgb(170, 170, 170);
   fill: black;
   &:hover {
     background-position: 100%;
@@ -61,6 +60,16 @@ h1 {
     cursor: pointer;
   }
   @extend .defaultTransition;
+}
+
+.slider {
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: 0%;
+  &:hover {
+    background-position: -100%;
+    cursor: pointer;
+  }
 }
 
 .contact-button {

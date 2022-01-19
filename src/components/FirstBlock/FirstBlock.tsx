@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useRef, useState } from 'react';
 import BackgroundImage from './BackgroundImage';
 import BottomBar from './BottomBar/BottomBar';
 import Hero from './Hero';
@@ -12,6 +12,7 @@ export const images = [
 ];
 
 type ContextProps = {
+  startTime: React.MutableRefObject<Date>;
   currentImage: number;
   images: string[];
   nextImage: () => void;
@@ -21,6 +22,7 @@ export const bgImageContext = createContext<Partial<ContextProps>>({});
 
 export default function FirstBlock() {
   let interval: NodeJS.Timer;
+  const startTime = useRef<Date>(null);
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function FirstBlock() {
   useEffect(() => {
     if (!interval) {
       interval = makeInterval();
+      startTime.current = new Date();
     }
     return () => {
       clearInterval(interval);
@@ -82,6 +85,7 @@ export default function FirstBlock() {
   return (
     <bgImageContext.Provider
       value={{
+        startTime: startTime,
         currentImage: currentImage,
         images,
         nextImage: nextImageButton,
