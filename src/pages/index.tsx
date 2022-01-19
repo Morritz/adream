@@ -5,6 +5,7 @@ import TwoByTwo from '@/components/TwoByTwo/TwoByTwo';
 import TwoByFour from '@/components/TwoByFour/TwoByFour';
 import Filler from '@/components/Filler/Filler';
 import News from '@/components/News/News';
+import Showcase from '@/components/Showcase/Showcase';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TwoByFour />
       <Filler />
       <News />
+      <Showcase />
     </main>
   );
 }

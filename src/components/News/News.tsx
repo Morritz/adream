@@ -7,7 +7,7 @@ export default function News() {
       <h1 className="w-full text-center text-[48px] md:text-[65px] md:leading-[75px] font-bold pt-[139.5px] pb-[106.5px]">
         Aktualności
       </h1>
-      <div className="flex flex-row justify-evenly flex-wrap gap-y-[32px]">
+      <div className="flex flex-row justify-evenly flex-wrap gap-y-[32px] pb-[140px]">
         <NewsElement
           src="/Glowna1/shutterstock_1433594243.png"
           date="01.01.2021"
