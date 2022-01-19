@@ -36,7 +36,7 @@ export default function Description({
         <h3 className="relative pt-[8px] pl-[10px] text-[28px] font-bold leading-[38px]">
           {title}
         </h3>
-        <div className="mt-[26px] ml-[10.5px] w-[49px] border-2 border-black"></div>
+        <div className="mt-[26px] ml-[10.5px] w-[49px] border-2 border-black bg-black"></div>
         <p className="ml-[10px] mt-[10px]">{subtitle}</p>
       </div>
     </div>

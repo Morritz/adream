@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Filler() {
   return (
-    <section className="relative w-full min-h-[642px] md:pl-[175px]">
+    <section className="relative w-full md:pl-[175px]">
       <div className="relative">
         <img
           className="background-image pl-[160px]"

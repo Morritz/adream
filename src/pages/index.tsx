@@ -4,6 +4,7 @@ import FirstBlock from '@/components/FirstBlock/FirstBlock';
 import TwoByTwo from '@/components/TwoByTwo/TwoByTwo';
 import TwoByFour from '@/components/TwoByFour/TwoByFour';
 import Filler from '@/components/Filler/Filler';
+import News from '@/components/News/News';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <TwoByTwo />
       <TwoByFour />
       <Filler />
+      <News />
     </main>
   );
 }
