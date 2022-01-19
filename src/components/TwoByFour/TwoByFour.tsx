@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseElement from './BaseElement';
 import ElementWithImage from './ElementWithImage';
+import ReadMoreButton from './ReadMoreButton';
 import Row from './Row';
 
 export default function TwoByFour() {
@@ -44,6 +45,7 @@ export default function TwoByFour() {
           text="Lorem ipsum dolor sit amet, conse lorem ipsum"
         ></ElementWithImage>
       </Row>
+      <ReadMoreButton />
     </div>
   );
 }
