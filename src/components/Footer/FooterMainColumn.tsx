@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterMainColumn = () => {
   return (
-    <div className="flex flex-col pb-[45px]">
+    <div className="flex flex-col">
       <div className="w-[250px] h-[75px] text-[65px] font-bold">LOGO</div>
       <div className="mt-[57px] flex flex-col justify-between h-[127px] w-[290px]">
         <p className="text-[16px] font-bold">
