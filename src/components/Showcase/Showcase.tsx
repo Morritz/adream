@@ -126,7 +126,7 @@ export default function Showcase() {
         </div>
         <div className="absolute top-0 bg-white ">
           <h1 className="text-[65px] font-bold text-right px-4">Galeria</h1>
-          <div className="mt-[48px] w-[450px] h-[16px] bg-black"></div>
+          <div className="mt-[48px] w-[250px] 2xl:w-[450px]  h-[16px] bg-black"></div>
         </div>
       </div>
       <ModalGateway>
