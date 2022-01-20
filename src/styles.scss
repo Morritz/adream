@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-$firstViewHeight: 940px;
-$yellowColor: #ffcc48;
-
-.defaultTransition {
-  transition: all 0.5s;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -37,34 +30,58 @@ h1 {
   height: 100%;
 }
 
-.arrow-left {
+$firstViewHeight: 940px;
+$yellowColor: #ffcc48;
+
+@mixin defaultTransition {
+  transition: all 0.5s;
+}
+
+@mixin black-to-white-gradient {
+  background: linear-gradient(to left, black 50%, white 50%);
+}
+
+@mixin white-to-black-gradient {
   background: linear-gradient(to right, white 50%, black 50%);
+}
+
+@mixin black-to-yellow-gradient {
+  background: linear-gradient(to left, $yellowColor 50%, black 50%);
+}
+
+@mixin arrow-base {
   background-size: 200% 100%;
   background-position: left bottom;
   fill: black;
+
   &:hover {
-    background-position: 100%;
     fill: white;
     cursor: pointer;
   }
-  transition: all 0.25s;
+}
+
+.arrow-left {
+  @include white-to-black-gradient;
+  @include arrow-base;
+  @include defaultTransition;
+
+  &:hover {
+    background-position: 100%;
+  }
 }
 
 .arrow-right {
-  background: linear-gradient(to left, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  fill: black;
+  @include black-to-white-gradient;
+  @include arrow-base;
+  @include defaultTransition;
+
   &:hover {
     background-position: -100%;
-    fill: white;
-    cursor: pointer;
   }
-  @extend .defaultTransition;
 }
 
 .slider {
-  background: linear-gradient(to left, black 50%, white 50%);
+  @include black-to-white-gradient;
   background-size: 200% 100%;
   background-position: 0%;
   &:hover {
@@ -72,42 +89,32 @@ h1 {
   }
 }
 
-.contact-button {
-  height: 52px;
-  max-height: 383px;
-
-  letter-spacing: 3.6px;
-  background: linear-gradient(to left, $yellowColor 50%, black 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  color: white;
-  &:hover {
-    background-position: -100%;
-    color: black;
-    cursor: pointer;
-  }
-  text-transform: uppercase;
-  font-weight: bold;
-  @extend .defaultTransition;
-}
-
-.readme-button {
-  height: 78px;
-  letter-spacing: 3.6px;
-  background: linear-gradient(to left, $yellowColor 50%, black 50%);
+@mixin button-base {
+  @include defaultTransition;
+  @include black-to-yellow-gradient;
   background-size: 200% 100%;
   background-position: left bottom;
   color: white;
   fill: white;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  font-weight: bold;
+
   &:hover {
     background-position: -100%;
     color: black;
     fill: black;
     cursor: pointer;
   }
-  text-transform: uppercase;
-  font-weight: bold;
-  @extend .defaultTransition;
+}
+.contact-button {
+  @include button-base;
+  height: 52px;
+}
+
+.read-more-button {
+  @include button-base;
+  height: 78px;
 }
 
 .fancy-navlink-border {
@@ -124,8 +131,6 @@ h1 {
   &:hover:after {
     transform: scaleX(1);
   }
-
-  transition: transform 250ms ease-in-out;
 }
 
 $tbtpadding: 29px;

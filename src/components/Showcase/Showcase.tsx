@@ -20,7 +20,17 @@ const photos = [
     width: 770,
   },
   {
+    source: '/Glowna1/shutterstock_763511701.png',
+    width: 800,
+    height: 280,
+  },
+  {
     source: '/Glowna1/shutterstock_763511722.png',
+    height: 578,
+    width: 800,
+  },
+  {
+    source: '/Glowna1/shutterstock_610938071.png',
     height: 578,
     width: 465,
   },
@@ -72,7 +82,7 @@ export default function Showcase() {
   }, [scrollable.current]);
 
   return (
-    <>
+    <section>
       <div
         ref={progressBarParent}
         className="w-full p-4 flex justify-evenly items-center gap-4"
@@ -136,6 +146,6 @@ export default function Showcase() {
           </Modal>
         ) : null}
       </ModalGateway>
-    </>
+    </section>
   );
 }

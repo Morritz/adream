@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <div className="w-full pt-[170px]"></div>
       <div className="flex flex-wrap-reverse text-white w-full bg-black min-h-[547px] px-[16px] md:px-[64px] 2xl:px-[175px] pt-[80px] pb-[45px] gap-x-[350px]">
         <div className="flex flex-col pb-[45px]">
@@ -46,6 +46,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

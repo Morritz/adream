@@ -6,7 +6,7 @@ import Row from './Row';
 
 export default function TwoByTwo() {
   return (
-    <div className="w-full min-h-[940px] px-[16px] md:px-[64px] py-[140px] 2xl:px-[175px] flex flex-col gap-y-[28px]">
+    <section className="w-full min-h-[940px] px-[16px] md:px-[64px] py-[140px] 2xl:px-[175px] flex flex-col gap-y-[28px]">
       <Row>
         <ImageContainer src="/Glowna1/shutterstock_1877634640.png">
           <Description
@@ -54,6 +54,6 @@ export default function TwoByTwo() {
           <Button />
         </ImageContainer>
       </Row>
-    </div>
+    </section>
   );
 }

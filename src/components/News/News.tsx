@@ -3,7 +3,7 @@ import NewsElement from './NewsElement';
 
 export default function News() {
   return (
-    <div className="w-full px-[16px] md:px-[64px] 2xl:px-[175px]">
+    <section className="w-full px-[16px] md:px-[64px] 2xl:px-[175px]">
       <h1 className="w-full text-center text-[48px] md:text-[65px] md:leading-[75px] font-bold pt-[139.5px] pb-[106.5px]">
         Aktualności
       </h1>
@@ -24,6 +24,6 @@ export default function News() {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
       </div>
-    </div>
+    </section>
   );
 }

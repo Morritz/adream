@@ -6,7 +6,7 @@ import Row from './Row';
 
 export default function TwoByFour() {
   return (
-    <div className="w-full min-h-[940px] px-[16px] md:px-[64px] 2xl:px-[175px] flex flex-col gap-y-[68.5px] lg:gap-y-[0px]">
+    <section className="w-full min-h-[940px] px-[16px] md:px-[64px] 2xl:px-[175px] flex flex-col gap-y-[68.5px] lg:gap-y-[0px]">
       <Row>
         <BaseElement>
           <p className="font-bold text-[48px] leading-[58px]">
@@ -46,6 +46,6 @@ export default function TwoByFour() {
         ></ElementWithImage>
       </Row>
       <ReadMoreButton />
-    </div>
+    </section>
   );
 }
