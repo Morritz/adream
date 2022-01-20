@@ -46,12 +46,9 @@ export default function Showcase() {
 
   const handleScroll = (el) => {
     const hasHorizontalScrollbar = el.scrollWidth > el.clientWidth;
-    console.log(hasHorizontalScrollbar);
     if (hasHorizontalScrollbar) {
       let scrollPercentage =
         (100 * el.scrollLeft) / (el.scrollWidth - el.clientWidth);
-
-      console.log(el.scrollHeight);
 
       scrollPercentage = scrollPercentage < 5 ? 5 : scrollPercentage;
 
