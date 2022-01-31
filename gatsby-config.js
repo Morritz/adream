@@ -11,5 +11,8 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-pnpm',
+    },
   ],
 };
